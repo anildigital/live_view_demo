@@ -44,7 +44,23 @@ defmodule LiveViewDemo.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:calendar, "~> 0.17.6"}
+      {:calendar, "~> 0.17.6"},
+      # {:membrane_core, "~> 0.3.0"},
+      {:membrane_core,
+       [
+         env: :prod,
+         git: "https://github.com/membraneframework/membrane-core.git",
+         branch: "master",
+         override: true
+       ]},
+      {:membrane_element_file, "~> 0.2.3"},
+      {:membrane_element_portaudio, "~> 0.2.3"},
+      {:membrane_element_ffmpeg_swresample, "~> 0.2.3"},
+      {:membrane_element_mad, "~> 0.2.3"},
+      {:membrane_loggers, "~> 0.2.0"},
+      {:membrane_element_lame, "~> 0.3"},
+      {:membrane_element_shout,
+       github: "membraneframework/membrane-element-shout", branch: "ignored-event"}
     ]
   end
 
